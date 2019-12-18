@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Princ</class>
+ <widget class="QMainWindow" name="Princ">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>836</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TP3_CLAUDET</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="tp01.qrc">
+    <normaloff>:/textures/ball-6x6.png</normaloff>:/textures/ball-6x6.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="GLArea" name="glarea">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_tir">
+       <property name="text">
+        <string>fire</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_bomb">
+       <property name="text">
+        <string>bomb</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_all">
+       <property name="text">
+        <string>all</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_reset">
+       <property name="text">
+        <string>reset</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_box">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_sphere">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_bullet">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>50</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>836</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLArea</class>
+   <extends>QOpenGLWidget</extends>
+   <header>glarea.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="tp01.qrc"/>
+ </resources>
+ <connections/>
+</ui>
